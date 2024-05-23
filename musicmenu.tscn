@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt1xi0eam4rwq"]
+
+[ext_resource type="AudioStream" uid="uid://boorvu1rwuanl" path="res://1amusic/rango-Что вершит судьбу.mp3" id="1_8ij4j"]
+[ext_resource type="AudioStream" uid="uid://bon6esiy0hdj7" path="res://1amusic/каков толк2.mp3" id="3_pxido"]
+
+[node name="MusicMenu" type="AudioStreamPlayer2D" groups=["music"]]
+process_mode = 3
+stream = ExtResource("1_8ij4j")
+volume_db = -30.597
+
+[node name="kommunizm" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+process_mode = 3
+stream = ExtResource("3_pxido")
+volume_db = -32.462
+
+[node name="tolk" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+process_mode = 3
+stream = ExtResource("3_pxido")
+volume_db = -32.674

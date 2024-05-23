@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpmnd1sndj2ia"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_mdglj"]
+[ext_resource type="Texture2D" uid="uid://vu88ionwlds4" path="res://1aaNEW/Светофоры гл меню доп.png" id="2_qrmxo"]
+[ext_resource type="Texture2D" uid="uid://bdaianp3x8sc7" path="res://1aaNEW/плэй без нажатия.png" id="3_eubje"]
+[ext_resource type="Texture2D" uid="uid://bqh44tqfllh15" path="res://1aaNEW/выход без нажатия.png" id="4_tnwxo"]
+[ext_resource type="Texture2D" uid="uid://ccmg82el2k8el" path="res://1aaNEW/настройки_управление_без_нажатия.png" id="5_n0cd0"]
+[ext_resource type="Texture2D" uid="uid://b5wqkqway8ve1" path="res://1aaNEW/выход крестик без нажатия.jpg" id="6_6jmko"]
+[ext_resource type="Texture2D" uid="uid://c36fv8uq8vssr" path="res://1aaNEW/выход крестик без нажатия2.jpg" id="6_dois6"]
+
+[node name="menu" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_mdglj")
+
+[node name="СветофорыГлМенюДоп" type="Sprite2D" parent="."]
+position = Vector2(544, 323)
+scale = Vector2(1.62, 1.62)
+texture = ExtResource("2_qrmxo")
+
+[node name="Button" type="Button" parent="."]
+process_mode = 3
+offset_left = 492.0
+offset_top = 156.0
+offset_right = 800.0
+offset_bottom = 464.0
+scale = Vector2(0.575, 0.575)
+tooltip_text = "Играть"
+icon = ExtResource("3_eubje")
+flat = true
+
+[node name="quit" type="Button" parent="."]
+process_mode = 3
+offset_left = 715.0
+offset_top = 314.0
+offset_right = 1023.0
+offset_bottom = 622.0
+scale = Vector2(0.485, 0.485)
+tooltip_text = "Выход"
+theme_override_font_sizes/font_size = 39
+icon = ExtResource("4_tnwxo")
+
+[node name="rules" type="Button" parent="."]
+offset_left = 314.0
+offset_top = 317.0
+offset_right = 622.0
+offset_bottom = 625.0
+scale = Vector2(0.485, 0.485)
+tooltip_text = "Управление"
+theme_override_font_sizes/font_size = 39
+icon = ExtResource("5_n0cd0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="music" type="Button" parent="."]
+offset_right = 148.0
+offset_bottom = 64.0
+scale = Vector2(0.275, 0.275)
+tooltip_text = "Выключить музыку"
+icon = ExtResource("6_dois6")
+flat = true
+
+[node name="musicstop" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(42.25, 42.25)
+scale = Vector2(0.278333, 0.278333)
+texture = ExtResource("6_6jmko")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="rules" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]

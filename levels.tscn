@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjplof8ty0g6y"]
+
+[ext_resource type="Script" path="res://levels.gd" id="1_y32wp"]
+[ext_resource type="Texture2D" uid="uid://vu88ionwlds4" path="res://1aaNEW/Светофоры гл меню доп.png" id="2_p6eyn"]
+[ext_resource type="Texture2D" uid="uid://d3dm1grauec4y" path="res://1aaNEW/1 левел.png" id="3_18a5d"]
+[ext_resource type="Texture2D" uid="uid://bjkfdnwsfery" path="res://1aaNEW/выход крестик без нажатия.png" id="3_720ur"]
+[ext_resource type="Texture2D" uid="uid://bvyhueqwd5qel" path="res://1aaNEW/2 левел.png" id="4_fg12w"]
+[ext_resource type="Texture2D" uid="uid://cp1ygt3w2l67" path="res://1aaNEW/бесконечный левел.png" id="5_uor6x"]
+[ext_resource type="Texture2D" uid="uid://dhg81c8swppu1" path="res://1aaNEW/2 левер чб.png" id="6_ufx4x"]
+
+[node name="levels" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_y32wp")
+
+[node name="СветофорыГлМенюДоп" type="Sprite2D" parent="."]
+position = Vector2(544, 323)
+scale = Vector2(1.62, 1.62)
+texture = ExtResource("2_p6eyn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="level1" type="Button" parent="."]
+offset_left = 250.0
+offset_top = 153.0
+offset_right = 546.0
+offset_bottom = 449.0
+scale = Vector2(0.56, 0.56)
+icon = ExtResource("3_18a5d")
+
+[node name="level2" type="Button" parent="."]
+offset_left = 711.0
+offset_top = 146.0
+offset_right = 1007.0
+offset_bottom = 442.0
+scale = Vector2(0.56, 0.56)
+icon = ExtResource("4_fg12w")
+
+[node name="inf" type="Button" parent="."]
+offset_left = 470.0
+offset_top = 326.0
+offset_right = 766.0
+offset_bottom = 622.0
+scale = Vector2(0.635, 0.635)
+tooltip_text = "Бесконечный режим"
+icon = ExtResource("5_uor6x")
+flat = true
+
+[node name="menu" type="Button" parent="."]
+offset_left = 1071.0
+offset_right = 1379.0
+offset_bottom = 308.0
+scale = Vector2(0.255, 0.255)
+icon = ExtResource("3_720ur")
+flat = true
+
+[node name="lock" type="Button" parent="."]
+offset_left = 711.0
+offset_top = 147.0
+offset_right = 1007.0
+offset_bottom = 443.0
+scale = Vector2(0.56, 0.56)
+tooltip_text = "Сначала пройди 1 уровень"
+icon = ExtResource("6_ufx4x")
+
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="inf" to="." method="_on_inf_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="lock" to="." method="_on_lock_pressed"]

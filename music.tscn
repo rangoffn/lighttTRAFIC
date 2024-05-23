@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1r7y1rchtr4j"]
+
+[ext_resource type="Script" path="res://music.gd" id="1_uacwk"]
+[ext_resource type="AudioStream" uid="uid://boorvu1rwuanl" path="res://1amusic/rango-Что вершит судьбу.mp3" id="2_ilnik"]
+
+[node name="Music" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_uacwk")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("2_ilnik")
+volume_db = -31.562
+autoplay = true

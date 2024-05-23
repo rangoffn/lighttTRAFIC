@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boorvu1rwuanl"
+path="res://.godot/imported/rango-Что вершит судьбу.mp3-921f313bde76e1f2522ec6dc8dcb4906.mp3str"
+
+[deps]
+
+source_file="res://1amusic/rango-Что вершит судьбу.mp3"
+dest_files=["res://.godot/imported/rango-Что вершит судьбу.mp3-921f313bde76e1f2522ec6dc8dcb4906.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
